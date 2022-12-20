@@ -108,7 +108,7 @@ char *is_cmd_exist(char *cmd)
 
 	while (arg != NULL)
 	{
-		full_path = strcpycat(arg, cmd);
+	        full_path = strcpycat(arg, cmd);
 		if (stat(full_path, &st) == 0)
 		{
 			free(env_path_var);

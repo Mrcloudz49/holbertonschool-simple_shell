@@ -5,7 +5,7 @@
  * @str: command
  * Return: pointer to new string
  */
-char *strcpycar(char *dest, char *str)
+char *strcpycat(char *dest, char *str)
 {
 	char *new_str = NULL;
 	int i = 0, x = 0;
