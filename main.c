@@ -8,17 +8,17 @@
  */
 int main(__attribute__((unused))int ac, char **argv)
 {
-        int tty = 0;
+	int tty = 0;
 
-        tty = isatty(STDIN_FILENO);
-        if (tty == 2)
-        {
-                perror(argv[0]);
-                return (2);
-        }
-        else
-                shell(argv, tty);
+	tty = isatty(STDIN_FILENO);
 
-        return (0);
+	if (tty == 2)
+	{
+		perror(argv[0]);
+		return (2);
+	}
+	else
+		shell(argv, tty);
+	return (0);
 }
 
