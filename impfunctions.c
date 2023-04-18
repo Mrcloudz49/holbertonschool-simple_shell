@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * strcpycar - make new string, append str to dest
+ * strcpycat - make new string, append str to dest
  * @dest: string from PATH
  * @str: command
  * Return: pointer to new string
