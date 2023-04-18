@@ -25,6 +25,7 @@ int shell(char **argv, int tty)
 
 		if (tmp == NULL)
 			perror(argv[0]);
+<<<<<<< HEAD
 
 		cmd = is_cmd_exist(cmd);
 		if (cmd == NULL)
@@ -36,6 +37,21 @@ int shell(char **argv, int tty)
 		free(cmd);
 		}
 
+=======
+/**
+* cmd - command
+* @tmp: temporary
+* cmd = is_cmd_exist(char *);
+* if (cmd == NULL)
+* perror(argv[0]);
+* else
+* {
+* command(cmd);
+* if (_strcmp(tmp, cmd) != 0)
+* free(cmd);
+* }
+*/
+>>>>>>> f08893015bccf6dc9aa877702db84cf91b0854ec
 		command(tmp);
 	}
 	free(buff);
