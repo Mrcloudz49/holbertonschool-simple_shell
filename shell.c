@@ -25,15 +25,17 @@ int shell(char **argv, int tty)
 		if (tmp == NULL)
 			perror(argv[0]);
 /**
-*		cmd = is_cmd_exist(char *);
-*		if (cmd == NULL)
-*		perror(argv[0]);
-*		else
-*		{
-*		command(cmd);
-*		if (_strcmp(tmp, cmd) != 0)
-*		free(cmd);
-*		}
+* cmd - command
+* @tmp: temporary
+* cmd = is_cmd_exist(char *);
+* if (cmd == NULL)
+* perror(argv[0]);
+* else
+* {
+* command(cmd);
+* if (_strcmp(tmp, cmd) != 0)
+* free(cmd);
+* }
 */
 		command(tmp);
 	}
