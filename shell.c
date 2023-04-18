@@ -8,8 +8,9 @@
 int shell(char **argv, int tty)
 {
 	size_t buffsize = 0;
-	char *buff = NULL, *tmp = NULL; /**cmp = NULL;*/
-	int valid_input = 1;
+	char *buff, *tmp;
+	char *cmd = NULL;
+	ssize_t  valid_input = 0;
 
 	while (valid_input)
 	{
@@ -24,17 +25,17 @@ int shell(char **argv, int tty)
 
 		if (tmp == NULL)
 			perror(argv[0]);
-/**
-*		cmd = is_cmd_exist(char *);
-*		if (cmd == NULL)
-*		perror(argv[0]);
-*		else
-*		{
-*		command(cmd);
-*		if (_strcmp(tmp, cmd) != 0)
-*		free(cmd);
-*		}
-*/
+
+		cmd = is_cmd_exist(cmd);
+		if (cmd == NULL)
+		perror(argv[0]);
+		else
+		{
+		command(cmd);
+		if (_strcmp(tmp, cmd) != 0)
+		free(cmd);
+		}
+
 		command(tmp);
 	}
 	free(buff);
